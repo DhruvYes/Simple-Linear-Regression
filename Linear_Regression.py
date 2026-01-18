@@ -5,7 +5,7 @@ import pandas as pd
 df = pd.read_csv("Advertising_1.csv")
 df.head()
 
-# 1️⃣ RAW DATA SCATTER PLOT
+# RAW DATA SCATTER PLOT
 plt.scatter(df['TV'], df['sales'])
 plt.xlabel("TV Advertising Budget")
 plt.ylabel("Sales")
@@ -34,7 +34,7 @@ y_pred
 lr.predict(X_test.iloc[1].values.reshape(1,1))
 
 
-# 2️⃣ SCATTER PLOT + REGRESSION LINE (FULL DATA)
+# SCATTER PLOT + REGRESSION LINE (FULL DATA)
 plt.scatter(df["TV"], df["sales"])
 plt.plot(x, lr.predict(x), color='Red')
 plt.xlabel("TV Advertising Budget")
@@ -43,7 +43,7 @@ plt.title("Regression Line on Full Data")
 plt.show()
 
 
-# 3️⃣ TEST SPLIT SCATTER + REGRESSION LINE
+# TEST SPLIT SCATTER + REGRESSION LINE
 plt.scatter(X_test, y_test)
 plt.plot(X_test, lr.predict(X_test), color='Red')
 plt.xlabel("TV Advertising Budget")
@@ -52,7 +52,7 @@ plt.title("Test Data with Regression Line")
 plt.show()
 
 
-# 4️⃣ TRAINING SPLIT SCATTER + REGRESSION LINE
+# TRAINING SPLIT SCATTER + REGRESSION LINE
 plt.scatter(X_train, y_train)
 plt.plot(X_train, lr.predict(X_train), color='Red')
 plt.xlabel("TV Advertising Budget")
@@ -67,3 +67,4 @@ b = lr.intercept_
 # y = mx + b
 y = m*150 + b
 print(y)
+
